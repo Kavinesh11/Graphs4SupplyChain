@@ -1,29 +1,27 @@
-# 📊 Graphs4SupplyChain - GNN-Powered Supply Chain Analytics
+<div align="center">
+ Graphs4SupplyChain - GNN-Powered Supply Chain Analytics
+
+![G4SC](image.jpeg)
+
 
 > Advanced Graph Neural Networks for Supply Chain Forecasting, Node Classification, and Predictive Analytics
+</div>
 
----
-
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [Project Architecture](#project-architecture)
 - [Directory Structure](#directory-structure)
 - [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Usage](#usage)
 - [Models & Benchmarks](#models--benchmarks)
-- [Data Formats](#data-formats)
 - [Docker Deployment](#docker-deployment)
-- [API Reference](#api-reference)
 - [Performance](#performance)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
-## 🎯 Overview
+
+##  Overview
 
 **Graphs4SupplyChain** is a comprehensive framework for leveraging Graph Neural Networks (GNNs) in supply chain optimization. This project enables:
 
@@ -37,22 +35,22 @@ Originally developed at **LAM Research**, continuing advanced work on supply cha
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 🧠 **Multiple GNN Models** | ASTGCN, DCRNN, STGCN, GraphSAGE, GCN, GAT, and more |
-| 📈 **Forecasting Models** | ARIMA, SARIMA, Prophet, XGBoost, Hybrid approaches |
-| 🏢 **Multi-Domain Support** | Homogeneous, Heterogeneous, and Hybrid graph types |
-| 📊 **Interactive Dashboard** | Streamlit-based web application for visualization |
-| 🐳 **Docker Ready** | Production-ready containerization |
-| 📚 **Comprehensive Benchmarks** | Pre-configured benchmark datasets (METR-LA, PEMS, Chicken-Pox, etc.) |
-| 🔄 **Multi-Step Forecasting** | Single and multi-step ahead predictions |
-| ⚙️ **Hybrid Models** | Combine spatial, temporal, and regression components |
+|  **Multiple GNN Models** | ASTGCN, DCRNN, STGCN, GraphSAGE, GCN, GAT, and more |
+|  **Forecasting Models** | ARIMA, SARIMA, Prophet, XGBoost, Hybrid approaches |
+|  **Multi-Domain Support** | Homogeneous, Heterogeneous, and Hybrid graph types |
+|  **Interactive Dashboard** | Streamlit-based web application for visualization |
+|  **Docker Ready** | Production-ready containerization |
+|  **Comprehensive Benchmarks** | Pre-configured benchmark datasets (METR-LA, PEMS, Chicken-Pox, etc.) |
+|  **Multi-Step Forecasting** | Single and multi-step ahead predictions |
+|  **Hybrid Models** | Combine spatial, temporal, and regression components |
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```mermaid
 graph TB
@@ -120,22 +118,22 @@ graph TB
 
 ---
 
-## 📁 Directory Structure
+##  Directory Structure
 
 ```
 kavinesh11-graphs4supplychain/
 │
-├── 📄 README.md                                    # Project documentation
-├── 📄 app.py                                       # Main Streamlit application
-├── 📄 docker-compose.yml                           # Multi-container setup
-├── 📄 Dockerfile                                   # Container image definition
-├── 📄 gnn_models.py                                # GNN model implementations
-├── 📄 metadata.json                                # Project metadata
-├── 📄 mkdocs.yml                                   # Documentation configuration
-├── 📄 requirements.txt                             # Python dependencies
-├── 📄 .env.default                                 # Environment variables template
+├──  README.md                                    # Project documentation
+├── app.py                                       # Main Streamlit application
+├──  docker-compose.yml                           # Multi-container setup
+├── Dockerfile                                   # Container image definition
+├──  gnn_models.py                                # GNN model implementations
+├──  metadata.json                                # Project metadata
+├──  mkdocs.yml                                   # Documentation configuration
+├── requirements.txt                             # Python dependencies
+├──  .env.default                                 # Environment variables template
 │
-├── 📊 benchmark_models/                            # Pre-configured benchmark experiments
+├── benchmark_models/                            # Pre-configured benchmark experiments
 │   │
 │   ├── heterogenous/                               # Heterogeneous graph benchmarks
 │   │   ├── imdb_nodeclassf.ipynb                   # IMDB node classification
@@ -166,7 +164,7 @@ kavinesh11-graphs4supplychain/
 │           └── lightning_logs/                     # PyTorch Lightning training logs
 │               └── version_0/ to version_47/       # 48 experiment versions
 │
-├── 📈 data/                                        # Datasets and experimental results
+├──  data/                                        # Datasets and experimental results
 │   │
 │   ├── GNN_1000_12_v2/                             # 1K nodes, 12 timesteps
 │   │   └── 1.json to 11.json                       # Experimental results
@@ -198,7 +196,7 @@ kavinesh11-graphs4supplychain/
 │   └── GNN_v0/                                     # Original GNN experiments
 │       └── 1.json to 11.json
 │
-├── 📖 docs/                                        # Documentation pages
+├──  docs/                                        # Documentation pages
 │   ├── index.md                                    # Main documentation
 │   ├── BenchmarkModels.md                          # Benchmark methodology
 │   ├── SingleStepGNN.md                            # Single-step forecasting
@@ -209,7 +207,7 @@ kavinesh11-graphs4supplychain/
 │   ├── Parser.md                                   # Data parsing guide
 │   └── TestPage.md & page1.md                      # Additional documentation
 │
-├── 🖼️ images/                                     # Model architecture diagrams
+├──  images/                                     # Model architecture diagrams
 │   ├── astgcn/ ├── a3tgcn/ ├── agcrn/             # Spatio-temporal models
 │   ├── dcrnn/ ├── dygrencoder/ ├── emagcn/
 │   ├── evolvegcnh/ ├── evolvegcno/ ├── gclstm/
@@ -218,10 +216,10 @@ kavinesh11-graphs4supplychain/
 │   ├── stgan/ ├── stgcn/ ├── stgnn/               # ST-specific architectures
 │   ├── neural/ └── introduction/                   # General architecture diagrams
 │
-├── 🗂️ metadata_cache/                              # Cached metadata
+├──  metadata_cache/                              # Cached metadata
 │   └── metadata.json                               # Precomputed graph properties
 │
-├── 📚 Notebooks/                                   # Interactive Jupyter notebooks
+├──  Notebooks/                                   # Interactive Jupyter notebooks
 │   ├── requirements.txt                            # Notebook-specific dependencies
 │   └── Benchmarks/
 │       ├── benchmark.py                            # Benchmark runner
@@ -234,7 +232,7 @@ kavinesh11-graphs4supplychain/
 │           ├── hungary_chickenpox.csv
 │           └── hungary_county_edges.csv
 │
-├── 🏷️ objects/                                    # Data structure documentation
+├── objects/                                    # Data structure documentation
 │   ├── dummy.md                                    # Sample format
 │   ├── spatial/
 │   │   ├── GCN.md                                  # Graph Convolutional Network
@@ -251,7 +249,7 @@ kavinesh11-graphs4supplychain/
 │       ├── stgan.md ├── stgcn.md ├── stgnn.md
 │       └── DCRNN.md
 │
-├── 🎨 pages/                                      # Streamlit dashboard pages
+├──  pages/                                      # Streamlit dashboard pages
 │   ├── single_gnn.py                               # Single GNN model interface
 │   ├── multi_gnn.py                                # Multi-model comparison
 │   ├── spatio-models.py                            # Pure spatial models
@@ -265,7 +263,7 @@ kavinesh11-graphs4supplychain/
 │   ├── test_page.py                                # Testing interface
 │   └── .ipynb                                      # Legacy notebooks
 │
-├── ⏰ ts_models/                                   # Time-series models
+├──  ts_models/                                   # Time-series models
 │   ├── __init__.py                                 # Package initialization
 │   ├── arima_st.py                                 # ARIMA implementation
 │   ├── sarima_st.py & sarima_updated.py            # Seasonal ARIMA
@@ -274,7 +272,7 @@ kavinesh11-graphs4supplychain/
 │   ├── hybrid_st.py                                # Hybrid TS approaches
 │   └── bottleneck_ts_model.py                      # Performance-optimized TS
 │
-└── 🔧 utils/                                       # Utility functions
+└──  utils/                                       # Utility functions
     ├── parser_st.py                                # Supply chain data parser
     └── utils.py                                    # General utilities
 
@@ -282,7 +280,7 @@ kavinesh11-graphs4supplychain/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1: Docker (Recommended)
 
@@ -413,7 +411,7 @@ jupyter notebook benchmark_models/homogenous/METR_LA/metr_la_nodeclassf.ipynb
 
 ---
 
-## 🧠 Models & Benchmarks
+##  Models & Benchmarks
 
 ### Graph Neural Network Models
 
@@ -506,7 +504,7 @@ timestamp,node_id,facility,value1,value2,...
 
 ---
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ### Building & Running
 
@@ -583,7 +581,7 @@ Response:
 
 ---
 
-## 📈 Performance
+## Performance
 
 ### Benchmark Results (Sample)
 
@@ -613,7 +611,7 @@ graph LR
 
 ---
 
-## 🎯 Use Cases
+##  Use Cases
 
 ### 1. **Supply Chain Demand Forecasting**
 
@@ -673,142 +671,9 @@ bottlenecks = analyzer.identify(
 
 ---
 
-## 🤝 Contributing
 
-We welcome contributions! Please:
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -r requirements.txt
-pip install pytest black flake8 mypy
-
-# Run tests
-pytest tests/
-
-# Format code
-black --line-length 100 .
-
-# Type checking
-mypy gnn_models.py
-```
-
-### Code Standards
-
-- ✅ Type hints required
-- ✅ Docstrings for all functions
-- ✅ 80%+ test coverage
-- ✅ PEP 8 compliance
-
----
-
-## 📚 Documentation
-
-- **[Full Documentation](./docs/index.md)** - Comprehensive guide
-- **[Model Guide](./docs/BenchmarkModels.md)** - Model architectures
-- **[Data Parser](./docs/Parser.md)** - Data loading guide
-- **[Performance](./docs/Bottleneck.md)** - Performance tuning
-- **[Graph Sparsity](./docs/Sparsity.md)** - Optimization techniques
-
----
-
-## 📋 Dataset References
-
-| Dataset | Nodes | Edges | Timesteps | Source |
-|---------|-------|-------|-----------|--------|
-| METR-LA | 207 | 1,515 | 34,272 | Traffic sensors, LA |
-| PEMS | 307/883 | 1,625/2,485 | 16,992 | CA freeway data |
-| Chicken-Pox | 20-100 | 100-500 | 400+ | Hungarian epidemiology |
-| OGB-MAG | 1.39M | 1.71M | - | Microsoft Academic Graph |
-| IMDB | 18K | 110K | - | Movie-actor relationships |
-
----
-
-## 🔧 Troubleshooting
-
-### Memory Issues
-
-```python
-# Reduce batch size
-model = ASTGCN(batch_size=16)  # Default: 64
-
-# Use gradient checkpointing
-model.enable_gradient_checkpointing()
-
-# Clear cache periodically
-torch.cuda.empty_cache()
-```
-
-### Slow Training
-
-```bash
-# Enable GPU
-export CUDA_VISIBLE_DEVICES=0
-
-# Use mixed precision
-python app.py --amp
-
-# Reduce model size
-python app.py --hidden-dim 32  # Default: 64
-```
-
-### Data Loading Errors
-
-```bash
-# Validate data format
-python -c "from utils.parser_st import validate; validate('data/GNN_v2/')"
-
-# Check existing metadata
-cat metadata_cache/metadata.json
-```
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details.
-
-Originally developed at **LAM Research** - Continuing collaborative research on supply chain intelligence systems.
-
----
-
-## 🙏 Acknowledgments
-
-- **LAM Research** - Original project sponsors
-- **DGL Team** - Deep Graph Library
-- **PyTorch Team** - Tensor computation framework
-- **Streamlit** - Web application framework
-- Contributors and the open-source community
-
----
-
-## 📧 Contact & Support
-
-| Channel | Link |
-|---------|------|
-| **GitHub Issues** | [Report Bugs](https://github.com/Kavinesh11/Graphs4SupplyChain/issues) |
-| **Discussions** | [Join Conversations](https://github.com/Kavinesh11/Graphs4SupplyChain/discussions) |
-| **Email** | support@graphs4supplychains.com |
-
----
-
-## 🔗 Project Links
-
-- 🎯 **GitHub**: https://github.com/Kavinesh11/Graphs4SupplyChain
-- 📖 **Docs**: See `/docs` folder
-- 🐳 **Docker Hub**: graphs4supply
-- 📊 **Live Demo**: Coming Soon
-
----
-
-## 📊 Project Statistics
+## Project Statistics
 
 ```mermaid
 pie title Project Composition
